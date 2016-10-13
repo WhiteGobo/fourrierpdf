@@ -1,0 +1,2 @@
+default:
+	lualatex main.tex
