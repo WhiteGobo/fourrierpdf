@@ -88,7 +88,7 @@ Interessant ist jetzt nur noch die Amplitude der einzelnen Schwingungen:
 		\draw[->] (0,0) -- (0,1);
 		\draw plot file {dat/sinussumme.dat};
 	\end{tikzpicture}
-	\caption{Ablesen der Amplituden von den einzelnen Scwindungen}
+	\caption{Ablesen der Amplituden von den einzelnen Schwingungen} \label{fig:schwingungsaufteilung}
 \end{figure}
 Nach dieser Aufteilung der Amplituden kann man die Grafik auch als Superpositiion der einzelnen Schwingungen schreiben. Die Grafik \ref{fig:frequenzaufteilung} können wir dadurch als Gleichung aufschreiben.
 
@@ -124,16 +124,16 @@ Wir modulieren dafür verschiedene Schwingungen $v_{2,3,\dots}$ mit einer Schwin
 \begin{equation}
 	\int_{1/f}  v_{2,3,\dots} (x) \cdot v_1(x) \mathrm{d}x = 0
 \end{equation}
-Diese Mittelung ist gleich null, wenn die Frequenz nicht die gleiche ist. bei gleichen Frequenzen erhält man einen Beitrag $\neq=$.
-Wie in Abbildung \ref{ } kann man eine beliebige Verteilung auf verschiedene Wellen aufteilen:
+Diese Mittelung ist gleich null, wenn die Frequenz nicht die gleiche ist. bei gleichen Frequenzen erhält man einen Beitrag $\neq 0$.
+Wie in Abbildung \ref{fig:schwingungsaufteilung} kann man eine beliebige periodische Funktion auf verschiedene Wellen aufteilen:
 \begin{equation}
-	f(x) = 
+	f(x) = \sum_i a_i v_i(x)
 \end{equation}
 Wenn man eine Verteilung wie oben moduliert und danach mittelt, fallen alle Beiträge von Schwingungen die nicht unserer untersuchten Frequenz entsprechen weg:
-\begin{multline}
-	\int_{1/\nu} f(x) v_1(x) \mathrm{d}x=\int_{1/\nu} a_1v_1^2(x)  \mathrm{d}x\\
-	=a_1\int_{1/f} v_1^2(x)  \mathrm{d}x
-\end{multline}
+\begin{eqnarray}
+	\int_{1/\nu} f(x) v_1(x) \mathrm{d}x&=\int_{1/\nu} a_1v_1^2(x)  \mathrm{d}x\\
+	&=a_1\int_{1/f} v_1^2(x)  \mathrm{d}x
+\end{eqnarray}
 Wir erhalten also aus dieser Rechnung den Beitrag einer Schwingung $a_1$ an unserer Verteilung $f$. Dies kann man auch mit den anderen Schwingungen $v_i$ durchführen und kann dadurch die anderen Beiträge $a_i$ ermitteln. Außerdem haben wir jetzt eine Rechnungsmethode gefunden die unserem gesuchten Skalarprodukt entspircht:
 \begin{equation}
 	< f | v_i > =  \frac{1}{\alpha_i}\int_{1/\nu} f(x) v_i(x) \mathrm{d}x
